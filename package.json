@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "grunt-contrib-less": "^3.0.0"
+  }
+}
