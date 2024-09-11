@@ -1,5 +1,19 @@
 {
   "dependencies": {
     "grunt-contrib-less": "^3.0.0"
-  }
+  },
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-contrib-cssmin": "^5.0.0",
+    "grunt-contrib-uglify": "^5.2.2"
+  },
+  "name": "exercicio-gruntfile",
+  "version": "1.0.0",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

@@ -1,28 +1,28 @@
 module.exports = function(grunt) {
-    // Configuração das tarefas
+    // Configuração das tarefas do Grunt
     grunt.initConfig({
-        // Configuração do LESS
-        less: {
-            development: {
-                files: {
-                    'css/style.css': 'less/style.less' // Compila o arquivo LESS para CSS
-                }
-            }
-        },
         // Configuração do Uglify (minificação de JavaScript)
         uglify: {
             build: {
                 files: {
-                    'js/script.min.js': ['js/script.js'] // Minifica o arquivo script.js
+                    'dist/script.min.js': ['js/script.js']  // Minifica script.js para script.min.js
+                }
+            }
+        },
+        // Configuração do CSSMin (minificação de CSS)
+        cssmin: {
+            target: {
+                files: {
+                    'dist/style.min.css': ['css/style.css']  // Minifica style.css para style.min.css
                 }
             }
         }
     });
 
-    // Carregar os plugins que serão usados
-    grunt.loadNpmTasks('grunt-contrib-less');
+    // Carregar os plugins
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // Registrar a tarefa padrão
-    grunt.registerTask('default', ['less', 'uglify']);
+    grunt.registerTask('default', ['uglify', 'cssmin']);
 };
